@@ -17,5 +17,4 @@ try:
 except ValueError as err:
     print(f"Ошибка ввода: {err}")
 else:
-    # Этот блок выполнится, только если в try всё прошло успешно
     print(f"Расстояние между ними через {T} ч: {distance:.2f} км.")
