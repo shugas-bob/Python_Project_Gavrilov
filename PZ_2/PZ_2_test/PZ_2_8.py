@@ -2,10 +2,12 @@
 Используя операцию деления нацело,
 найти количество полных килобайтов,
 которые занимает данный файл (1 килобайт = 1024 байта).'''
+while True:
+    try:
+        file_bite = int(input("Введите размер файла в байтах: "))
+        file_kilo, ost = divmod(file_bite, 1024)
+        print(f"Размер файла весом {file_bite} байт занимает {file_kilo} килобайт")
 
-try:
-    file_bite = int(input("Введите размер файла в байтах: "))
-    file_kilo, ost = divmod(file_bite, 1024)
-    print(f"Размер файла весом {file_bite} байт занимает {file_kilo} килобайт")
-except ValueError:
-    print("Вводите числа!!")
+        break
+    except ValueError:
+        print("Вводите числа!! Повторите:")
