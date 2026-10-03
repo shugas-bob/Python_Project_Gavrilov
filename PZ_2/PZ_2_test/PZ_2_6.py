@@ -8,12 +8,14 @@ while True:
         l_cm = int(input("Введите расстояние в сантиметрах: "))
 
         if l_cm <= 0:
-            raise ValueError("Расстояние должно быть больше нуля!")
+            print("Расстояние должно быть больше нуля! Попробуйте еще раз.\n")
+        else:
+            meters, remaining_cm = divmod(l_cm, 100)
 
-        meters = l_cm // 100
+            print(f"Количество полных метров в {l_cm} см: {meters}")
+            print(f"Оставшиеся сантиметры: {remaining_cm}")
 
-        print(f"Количество полных метров в {l_cm} см: {meters}")
-        break
-        
-    except ValueError as err:
-        print(f"Ошибка ввода ({err}). Пожалуйста, попробуйте еще раз.\n")
+            break
+
+    except ValueError:
+        print("Ошибка ввода: нужно ввести целое число. Пожалуйста, попробуйте еще раз.\n")
