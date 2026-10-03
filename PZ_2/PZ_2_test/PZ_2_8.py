@@ -8,4 +8,4 @@ try:
     file_kilo, ost = divmod(file_bite, 1024)
     print(f"Размер файла весом {file_bite} байт занимает {file_kilo} килобайт")
 except ValueError:
-    print("Вводите числа!!!")
+    print("Вводите числа!!")
