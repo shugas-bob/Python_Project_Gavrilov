@@ -12,7 +12,7 @@ try:
     if v1 < 0 or v2 < 0 or S < 0 or T < 0:
         raise ValueError("Время, скорость, расстояние и время не могут быть отрицательными")
 
-    distance = abs(S - T * (v1 + v2))
+    distance = S - T * (v1 + v2)
 
 except ValueError as err:
     print(f"Ошибка ввода: {err}")
