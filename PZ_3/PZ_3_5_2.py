@@ -18,7 +18,7 @@ hundreds, tens = divmod(num, 100)
 if hundreds > 4 or tens < 10 or tens > 14:
     print("Не найдено таких мастей")
 
-elif hundreds == 1:
+if hundreds == 1:
     hundreds = 'пики'
 
 elif hundreds == 2:
@@ -30,7 +30,7 @@ elif hundreds == 3:
 elif hundreds == 4:
     hundreds = 'черви'
 
-elif tens == 11:
+if tens == 11:
     tens = 'валет'
 
 elif tens == 12:
