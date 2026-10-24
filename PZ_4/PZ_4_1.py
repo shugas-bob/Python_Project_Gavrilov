@@ -3,7 +3,12 @@
 конфет.
 '''
 
-a = float(input("Введите цену за 1 кг конфет: "))
+while True:
+    try:
+        a = float(input("Введите цену за 1 кг конфет: "))
+        break
+    except ValueError:
+        print("Вводите число!!")
 
 b = 1.2
 while b <= 2:
